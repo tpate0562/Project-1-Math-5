@@ -20,7 +20,7 @@
 \maketitle
 \section{}
 \textbf{Matrices defined}: $A=\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;B=\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; V=\begin{bmatrix}1&4&0\end{bmatrix}$
-\\[0.1in]When \verb+show(A), show(B), show(V)+ was input into the python terminal, the output from Sagemath was $\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; \begin{bmatrix}1&4&0\end{bmatrix}$ respectively. The matrices were repeated back to me as I originially entered them
+\\[0.1in]When \verb+show(A), show(B), show(V)+ was input into the python terminal, the output from SageMath was $\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; \begin{bmatrix}1&4&0\end{bmatrix}$ respectively. The matrices were repeated back to me as I originially entered them
 \\[0.01in]$$\text{For }QQ \rightarrow RR \Rightarrow \begin{bmatrix}1.00000000000000&3.00000000000000\\2.00000000000000&4.00000000000000\end{bmatrix}$$ 
 $$\text{For }QQ \rightarrow RDF  \Rightarrow \begin{bmatrix}1.0 & 2.0 \\3.0 & 4.0\end{bmatrix}$$ 
 \\[0.1in] $RR$ and $RDF$ seem to be data types for the matrices. $RR$ appears to be an aribtrary precision floating point, outputting the maximum number of decimal places allowed. It won't be as precise as $QQ$, which is symbolic math, nor will it be as fast as $RDF$, but it will get you a decimal answer when youre looking for one.
@@ -38,8 +38,11 @@ For input = 5: $\begin{bmatrix}1 & 0 & 0 & 0 & 0 \\0 & 1 & 0 & 0 & 0 \\0 & 0 & 1
 \\[0.05in]In SageMath, to add: \verb|A+C| results in $\begin{bmatrix}4 & 9 \\4 & 10\end{bmatrix}$, to subtract \verb|A-C| results in $\begin{bmatrix}-2 & -5 \\2 & -2\end{bmatrix}$
 \\[0.05in] Lastly, to multiply: \verb|A*C| results in $\begin{bmatrix}5 & 19 \\13 & 45\end{bmatrix}$, bonus: \verb+det(A*C)+ results in -22
 $$B^T=\begin{bmatrix}0 & 1 \\2 & 1 \\-1 & 10\end{bmatrix}$$
-
-
+\\[0.1in] \verb+A*C==C*A+ returned \verb+false+, meaning $AC\neq CA$
+\\[0.1in] \verb+(A*C).transpose()==A.transpose()*C.transpose()+ returned \verb+false+, meaning $(AC)^T\neq A^TC^T$
+\\[0.1in] \verb|(A+C).transpose()==A.transpose()+C.transpose()| returned \verb+true+, meaning $(A+C)^T=A^T+C^T$
+\\[0.1in] \verb|(c*A).transpose()==c*A.transpose()| returned \verb|true| for $c=6$ and $c=10$, meaning $(cA)^T=c*A^T$
+\\[0.1in]
 \pagebreak
 \section{}
 \pagebreak

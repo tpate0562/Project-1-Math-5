@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1741154741.56711 "/Users/tejaspatel/Desktop/LaTeX Projects/Project 1 Math 5/Project 1 Math 5.tex" "Project 1 Math 5.pdf" "Project 1 Math 5" 1741154742.68481 0
-  "/Users/tejaspatel/Desktop/LaTeX Projects/Project 1 Math 5/Project 1 Math 5.tex" 1741154741.35305 2623 2feedbbae44ac2c93857cd5a5aa5ab98 ""
+["pdflatex"] 1741159946.20282 "/Users/tejaspatel/Desktop/LaTeX Projects/Project 1 Math 5/Project 1 Math 5.tex" "Project 1 Math 5.pdf" "Project 1 Math 5" 1741159947.33775 0
+  "/Users/tejaspatel/Desktop/LaTeX Projects/Project 1 Math 5/Project 1 Math 5.tex" 1741159945.9489 3045 231a89b3c573bbe60fa080a23ae280be ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -198,9 +198,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1729555295.99067 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729555229 8221428 380a9ae05887af09f5a76ce7a01b05d8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Project 1 Math 5.aux" 1741154742.59209 647 f3ee0fcc2d18ac6716948b1d2ef1f317 "pdflatex"
-  "Project 1 Math 5.out" 1741154742.59269 175 0c445c11d55d2836d41884682ae0087c "pdflatex"
-  "Project 1 Math 5.tex" 1741154741.35305 2623 2feedbbae44ac2c93857cd5a5aa5ab98 ""
+  "Project 1 Math 5.aux" 1741159947.24757 647 f3ee0fcc2d18ac6716948b1d2ef1f317 "pdflatex"
+  "Project 1 Math 5.out" 1741159947.24822 175 0c445c11d55d2836d41884682ae0087c "pdflatex"
+  "Project 1 Math 5.tex" 1741159945.9489 3045 231a89b3c573bbe60fa080a23ae280be ""
   (generated)
   "Project 1 Math 5.aux"
   "Project 1 Math 5.log"
