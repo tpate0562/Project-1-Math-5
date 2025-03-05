@@ -1,0 +1,50 @@
+ %!TeX root = Project 1 Math 5.tex
+\documentclass{article}
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage{amsopn}
+\usepackage{bbding}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage[margin = 1in]{geometry}
+\title{Project 1, Transformations}
+\date{25 March, 2025}
+\author{Tejas Patel}
+\begin{document}
+\maketitle
+\section{}
+\textbf{Matrices defined}: $A=\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;B=\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; V=\begin{bmatrix}1&4&0\end{bmatrix}$
+\\[0.1in]When \verb+show(A), show(B), show(V)+ was input into the python terminal, the output from Sagemath was $\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; \begin{bmatrix}1&4&0\end{bmatrix}$ respectively. The matrices were repeated back to me as I originially entered them
+\\[0.01in]$$\text{For }QQ \rightarrow RR \Rightarrow \begin{bmatrix}1.00000000000000&3.00000000000000\\2.00000000000000&4.00000000000000\end{bmatrix}$$ 
+$$\text{For }QQ \rightarrow RDF  \Rightarrow \begin{bmatrix}1.0 & 2.0 \\3.0 & 4.0\end{bmatrix}$$ 
+\\[0.1in] $RR$ and $RDF$ seem to be data types for the matrices. $RR$ appears to be an aribtrary precision floating point, outputting the maximum number of decimal places allowed. It won't be as precise as $QQ$, which is symbolic math, nor will it be as fast as $RDF$, but it will get you a decimal answer when youre looking for one.
+\\[0.1in]$$\text{RREF}(B)=\begin{bmatrix}
+    1 & 0 & \frac{21}{2} \\
+0 & 1 & -\frac{1}{2}
+\end{bmatrix}$$
+\\[0.1in] The command creates an identity matrix of the degree of the input. 
+\\For the original command: $\begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\0 & 0 & 0 & 1\end{bmatrix}$ 
+For input = 2: $\begin{bmatrix}1 & 0 \\0 & 1\end{bmatrix}$
+For input = 5: $\begin{bmatrix}1 & 0 & 0 & 0 & 0 \\0 & 1 & 0 & 0 & 0 \\0 & 0 & 1 & 0 & 0 \\0 & 0 & 0 & 1 & 0 \\0 & 0 & 0 & 0 & 1\end{bmatrix}$
+\pagebreak
+\section{}
+\textbf{New matrices defined}: $C=\begin{bmatrix}3 & 7 \\1 & 6\end{bmatrix}$
+\\[0.05in]In SageMath, to add: \verb|A+C| results in $\begin{bmatrix}4 & 9 \\4 & 10\end{bmatrix}$, to subtract \verb|A-C| results in $\begin{bmatrix}-2 & -5 \\2 & -2\end{bmatrix}$
+\\[0.05in] Lastly, to multiply: \verb|A*C| results in $\begin{bmatrix}5 & 19 \\13 & 45\end{bmatrix}$, bonus: \verb+det(A*C)+ results in -22
+$$B^T=\begin{bmatrix}0 & 1 \\2 & 1 \\-1 & 10\end{bmatrix}$$
+
+
+\pagebreak
+\section{}
+\pagebreak
+\section{}
+\pagebreak
+\section{}
+
+\end{document}
