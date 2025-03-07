@@ -23,31 +23,31 @@
 \\[0.1in]When \verb+show(A), show(B), show(V)+ was input into the python terminal, the output from SageMath was $\begin{bmatrix}1&2\\3&4\end{bmatrix},\;\;\begin{bmatrix}0&2&-1\\1&1&10\end{bmatrix},\;\; \begin{bmatrix}1&4&0\end{bmatrix}$ respectively. The matrices were repeated back to me as I originially entered them
 \\[0.01in]$$\text{For }QQ \rightarrow RR \Rightarrow \begin{bmatrix}1.00000000000000&3.00000000000000\\2.00000000000000&4.00000000000000\end{bmatrix}$$ 
 $$\text{For }QQ \rightarrow RDF  \Rightarrow \begin{bmatrix}1.0 & 2.0 \\3.0 & 4.0\end{bmatrix}$$ 
-\\[0.1in] $RR$ and $RDF$ seem to be data types for the matrices. $RR$ appears to be an aribtrary precision floating point, outputting the maximum number of decimal places allowed. It won't be as precise as $QQ$, which is symbolic math, nor will it be as fast as $RDF$, but it will get you a decimal answer when youre looking for one.
+\\[0.1in] $RR$ and $RDF$ seem to be data types for the matrices. $RR$ appears to be an aribtrary precision floating point, outputting the maximum number of decimal places allowed. It won't be as precise as $QQ$, which is symbolic math, nor will it be as fast as $RDF$, which seems to be reduced decimal form, but it will get you a precise decimal answer when youre looking for one.
 \\[0.1in]$$\text{RREF}(B)=\begin{bmatrix}
     1 & 0 & \frac{21}{2} \\
 0 & 1 & -\frac{1}{2}
 \end{bmatrix}$$
 \\[0.1in] The command \verb+I4 = identity matrix(n)+ creates an identity matrix of the degree of the input \verb+n+. 
-\\For the original command: $\begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\0 & 0 & 0 & 1\end{bmatrix}$ 
+\\[0.1in]For the original command: $\begin{bmatrix}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0 \\0 & 0 & 0 & 1\end{bmatrix}$ 
 For input = 2: $\begin{bmatrix}1 & 0 \\0 & 1\end{bmatrix}$
 For input = 5: $\begin{bmatrix}1 & 0 & 0 & 0 & 0 \\0 & 1 & 0 & 0 & 0 \\0 & 0 & 1 & 0 & 0 \\0 & 0 & 0 & 1 & 0 \\0 & 0 & 0 & 0 & 1\end{bmatrix}$
 \pagebreak
 \section{}
 \textbf{New matrices defined}: $C=\begin{bmatrix}3 & 7 \\1 & 6\end{bmatrix}$
-\\[0.05in]In SageMath, to add: \verb|A+C| results in $\begin{bmatrix}4 & 9 \\4 & 10\end{bmatrix}$, to subtract \verb|A-C| results in $\begin{bmatrix}-2 & -5 \\2 & -2\end{bmatrix}$
-\\[0.05in] Lastly, to multiply: \verb|A*C| results in $\begin{bmatrix}5 & 19 \\13 & 45\end{bmatrix}$, bonus: \verb+det(A*C)+ results in -22
-$$B^T=\begin{bmatrix}0 & 1 \\2 & 1 \\-1 & 10\end{bmatrix}$$
+\\[0.05in]\textbf{a}: In SageMath, to add: \verb|A+C| results in $\begin{bmatrix}4 & 9 \\4 & 10\end{bmatrix}$, to subtract \verb|A-C| results in $\begin{bmatrix}-2 & -5 \\2 & -2\end{bmatrix}$
+\\[0.05in]Lastly, to multiply: \verb|A*C| results in $\begin{bmatrix}5 & 19 \\13 & 45\end{bmatrix}$, bonus: \verb+det(A*C)+ results in -22
+\\\textbf{b:} $$B^T=\begin{bmatrix}0 & 1 \\2 & 1 \\-1 & 10\end{bmatrix}\text{ shows that } \forall x \in B \left\{x_{ij} \rightarrow x_{ji} \right\} $$
 \\[0.1in] \verb+A*C==C*A+ returned \verb+false+, meaning $AC\neq CA$
 \\[0.1in] \verb+(A*C).transpose()==A.transpose()*C.transpose()+ returned \verb+false+, meaning $(AC)^T\neq A^TC^T$
 \\[0.1in] \verb|(A+C).transpose()==A.transpose()+C.transpose()| returned \verb+true+, meaning $(A+C)^T=A^T+C^T$
 \\[0.1in] \verb|(c*A).transpose()==c*A.transpose()| returned \verb|true| for $c=6$ and $c=10$, meaning $(cA)^T=c*A^T$
-\\[0.1in] m needs to equal p
+\\[0.1in] The left number of columns in the left matrix must equal the number of rows in the right matrix. If $m$ is the number of columns in A and $p$ is the number of rows in B, then $m=p$ must be true. The output of matrix multiplication is going to be of dimension $n \times q$
 \section{}
 a: The output from the code is 4 graphs, each one containing 2 vectors. The blue arrows represent $P1, P2, P3, P4$ and the purple arrows represent $Q1,Q2,Q3,Q4$. 
 \\[0.05in]b: reflects across the $y$ axis (or $x_2$ aixs). Vector $(2,-4)$ becomes $(-2,-4)$
 \\[0.05in]c: Reflects across $y=x$, $(3,7)$ becomes $(7,3)$ and $(1,0)$ becomes $(0,1)$
-\\[0.05in]d: Reflects across $y=x$, $(3,7)$ becomes $(-7,-3)$ and $(1,0)$ becomes $(0,-1)$
+\\[0.05in]d: Reflects across $y=-   x$, $(3,7)$ becomes $(-7,-3)$ and $(1,0)$ becomes $(0,-1)$
 \\[0.05in]e: Maintains $x$ value, sets $y$ value to $0$. $(3,7)$ becomes $(3,0)$ and $(0,1)$ becomes $(0,0)$
 \\[0.05in]f: Pretty much using the reciprocal of the columns of M, the matrix $\begin{bmatrix}1&0\\0&-1\end{bmatrix}$ resolves the reflection across the $x_1$ axis, where $(3,7)$ becomes $(-3,7)$
 \\[0.05in]g: The transformation $\begin{bmatrix}\cos\theta&-sin\theta\\\sin\theta&\cos\theta\end{bmatrix}$ rotates the vector it is multiplied by by angle $\theta$ counterclockwise. $(3,7)$ becomes approx. $(-2.828, 7.071)$, creating a $45\degree$ dihedral angle
