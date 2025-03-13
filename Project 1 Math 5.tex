@@ -44,8 +44,8 @@ For input = 5: $\begin{bmatrix}1 & 0 & 0 & 0 & 0 \\0 & 1 & 0 & 0 & 0 \\0 & 0 & 1
 \\[0.1in] \verb|(c*A).transpose()==c*A.transpose()| returned \verb|true| for $c=6$ and $c=10$, meaning $(cA)^T=c*A^T$
 \\[0.1in] The left number of columns in the left matrix must equal the number of rows in the right matrix. If $m$ is the number of columns in A and $p$ is the number of rows in B, then $m=p$ must be true. The output of matrix multiplication is going to be of dimension $n \times q$
 \section{}
-a: The output from the code is 4 graphs, each one containing 2 vectors. The blue arrows represent $P1, P2, P3, P4$ and the purple arrows represent $Q1,Q2,Q3,Q4$. 
-\\[0.05in]b: reflects across the $y$ axis (or $x_2$ aixs). Vector $(2,-4)$ becomes $(-2,-4)$
+a: The output from the code is 4 graphs, each one containing 2 vectors. The blue arrows represent $P1, P2, P3, P4$ and the purple arrows represent $Q1,Q2,Q3,Q4$. See the output tikzpictures \hyperref[sec:intro]{here}
+\\[0.05in]b: Reflects across the $y$ axis (or $x_2$ aixs). Vector $(2,-4)$ becomes $(-2,-4)$
 \\[0.05in]c: Reflects across $y=x$, $(3,7)$ becomes $(7,3)$ and $(1,0)$ becomes $(0,1)$
 \\[0.05in]d: Reflects across $y=-   x$, $(3,7)$ becomes $(-7,-3)$ and $(1,0)$ becomes $(0,-1)$
 \\[0.05in]e: Maintains $x$ value, sets $y$ value to $0$. $(3,7)$ becomes $(3,0)$ and $(0,1)$ becomes $(0,0)$
@@ -62,7 +62,7 @@ Checking $\begin{bmatrix}1&1\\1&-1\end{bmatrix}$ with the Identity Matrix $\begi
 The expected answer is $\begin{bmatrix}1+0\\0-1\end{bmatrix} = \begin{bmatrix}1\\-1\end{bmatrix}$
 \\[0.2in]$$\begin{bmatrix}1&1\\1&-1\end{bmatrix}\begin{bmatrix}1\\0\end{bmatrix}= \begin{bmatrix}
 1\cdot 1 + 1 \cdot 0 \\ 1\cdot 0+-1\cdot 1\end{bmatrix}=\begin{bmatrix}1+0\\0-1\end{bmatrix}=\begin{bmatrix}1\\-1\end{bmatrix}$$
-We can observe the answer matches the expected, showing the transformation matrix $A$ is the correct transformation. The answer was check with SageMath
+We can observe the answer matches the expected, showing the transformation matrix $A$ is the correct transformation. The answer was checked with SageMath
 \section{Determining the Transformation Matrix J}
 $\begin{bmatrix}
 x_{11}&x_{12}\\x_{21}&x_{22}\\x_{31}&x_{32}\\x_{41}&x_{42}
@@ -77,4 +77,22 @@ Row 1: $x_1x_{11}+x_2x_{12}=2x_1-5x_2 \Rightarrow x_{11}=2\text{ and }x_{12}=-5$
 \subsection{Combining the results}
 Combining the results back into the original matrix form:
 $J=\begin{bmatrix}2&-5\\0&0\\1&4\\0&1\end{bmatrix}$
+\pagebreak
+\section{Extras}
+\subsection{Section 3 tikzpictures}
+\label{sec:intro}
+\begin{tikzpicture}
+    % Axes
+    \draw[->] (-2,0) -- (2,0) node[right] {\small $x$};
+    \draw[->] (0,-2) -- (0,2) node[above] {\small $y$};
+
+    % Original basis vectors
+    \draw[->,blue,thick] (0,0) -- (1,0) node[below right] {\small $\mathbf{e_1}$};
+    \draw[->,blue,thick] (0,0) -- (0,1) node[above right] {\small $\mathbf{e_2}$};
+
+    % Transformed basis vectors
+    \draw[->,purple,thick] (0,0) -- (-1,0) node[below left] {\small $M\mathbf{e_1}$};
+    \draw[->,purple,thick] (0,0) -- (0,1) node[above right] {\small $M\mathbf{e_2} = \mathbf{e_2}$};
+\end{tikzpicture}
+
 \end{document}
